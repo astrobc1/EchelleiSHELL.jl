@@ -305,13 +305,17 @@ version = "0.6.8"
 
 [[deps.Echelle]]
 deps = ["AstroLib", "DataInterpolations", "FITSIO", "ImageFiltering", "NaNStatistics", "Polynomials", "PyCall", "SkyCoords", "Statistics", "StatsBase"]
-path = "/Users/cale/Codes/JuliaProjects/Echelle/"
+git-tree-sha1 = "55358d2430c32dfb4985bd38f030db0ac31cd2de"
+repo-rev = "master"
+repo-url = "https://github.com/astrobc1/Echelle.jl"
 uuid = "0452828c-43f4-4a88-ad3b-1639e58135de"
 version = "0.1.0"
 
 [[deps.EchelleReduce]]
 deps = ["Dierckx", "Echelle", "Infiltrator", "JLD2", "LsqFit", "NaNStatistics", "OrderedCollections", "Pkg", "Polynomials", "PyCall", "PyPlot", "SpecialFunctions"]
-path = "/Users/cale/Codes/JuliaProjects/EchelleReduce/"
+git-tree-sha1 = "db406bf723c9c0f3eab6555c508a58273e6a5d1b"
+repo-rev = "master"
+repo-url = "https://github.com/astrobc1/EchelleReduce.jl"
 uuid = "579f7780-8ee9-4b14-aabb-d9ce68a4959f"
 version = "0.1.0"
 
