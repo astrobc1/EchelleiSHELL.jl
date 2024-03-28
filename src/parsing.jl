@@ -50,7 +50,7 @@ end
 # Read in reduced spectrum and error, wavelength separate
 function Base.read(
         data::iSHELLL1;
-        order::Int, flip=true, hdu::Int=2, xrange::Union{Vector{Int}, Nothing}=nothing, norm::Union{Real, Nothing}=nothing
+        order::Int, flip=true, hdu::Int=2, pix_range::Union{Vector{Int}, Nothing}=nothing, norm::Union{Real, Nothing}=nothing
     )
     spec, specerr = FITS(data.filename) do file
         d = read(file[hdu], "$order")
@@ -60,9 +60,9 @@ function Base.read(
         reverse!(spec)
         reverse!(specerr)
     end
-    if !isnothing(xrange)
-        spec[.~(xrange[1] .< eachindex(spec) .< xrange[2])] .= NaN
-        specerr[.~(xrange[1] .< eachindex(specerr) .< xrange[2])] .= NaN
+    if !isnothing(pix_range)
+        spec[.~(pix_range[1] .< eachindex(spec) .< pix_range[2])] .= NaN
+        specerr[.~(pix_range[1] .< eachindex(specerr) .< pix_range[2])] .= NaN
     end
     if !isnothing(norm)
         v = nanquantile(Echelle.quantile_filter(spec, window=5), norm)
