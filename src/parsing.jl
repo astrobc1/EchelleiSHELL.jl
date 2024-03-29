@@ -53,7 +53,12 @@ function Base.read(
         order::Int, flip=true, hdu::Int=2, pix_range::Union{NTuple{2, Int}, Nothing}=nothing, norm::Union{Real, Nothing}=nothing
     )
     spec, specerr = FITS(data.filename) do file
-        d = read(file[hdu], "$order")
+        col0 = FITSIO.columns(file[2])[1]
+        if occursin('.', col0)
+            d = read(file[hdu], "$order.1")
+        else
+            d = read(file[hdu], "$order")
+        end
         return d[:, 1], d[:, 2]
     end
     if flip
