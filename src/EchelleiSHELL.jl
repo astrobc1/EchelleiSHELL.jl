@@ -1,7 +1,6 @@
 module EchelleiSHELL
 
 using FITSIO, JLD2
-using Infiltrator
 using Polynomials
 using OrderedCollections
 using AstroAngles, SkyCoords

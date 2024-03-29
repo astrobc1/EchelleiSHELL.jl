@@ -2,7 +2,7 @@
 
 julia_version = "1.10.2"
 manifest_format = "2.0"
-project_hash = "99f9a24da8cd33d4f3b3c2e4f736f64a1b898a92"
+project_hash = "f765825d3fa222064a73a58c37ea05bdc81834ed"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -207,10 +207,10 @@ uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
 version = "1.16.0"
 
 [[deps.DataInterpolations]]
-deps = ["LinearAlgebra", "PrettyTables", "RecipesBase", "Reexport"]
-git-tree-sha1 = "79e533ab41ad6784eea6eafbf3f1c615c9a1349e"
+deps = ["FindFirstFunctions", "LinearAlgebra", "PrettyTables", "RecipesBase", "Reexport"]
+git-tree-sha1 = "e31c460739fb1beb9d84cc851b670b43ef493fda"
 uuid = "82cc6244-b520-54b8-b5a6-8a565e85f1d0"
-version = "4.7.0"
+version = "4.7.1"
 
     [deps.DataInterpolations.extensions]
     DataInterpolationsChainRulesCoreExt = "ChainRulesCore"
@@ -309,7 +309,7 @@ version = "0.6.8"
 
 [[deps.Echelle]]
 deps = ["AstroLib", "DataInterpolations", "FITSIO", "ImageFiltering", "NaNStatistics", "Polynomials", "PyCall", "SkyCoords", "Statistics", "StatsBase"]
-git-tree-sha1 = "55358d2430c32dfb4985bd38f030db0ac31cd2de"
+git-tree-sha1 = "cf747ac2ec6423d29991aa46e2a098e6c84e7b04"
 repo-rev = "master"
 repo-url = "https://github.com/astrobc1/Echelle.jl"
 uuid = "0452828c-43f4-4a88-ad3b-1639e58135de"
@@ -317,7 +317,7 @@ version = "0.1.0"
 
 [[deps.EchelleReduce]]
 deps = ["Dierckx", "Echelle", "Infiltrator", "JLD2", "LsqFit", "NaNStatistics", "OrderedCollections", "Pkg", "Polynomials", "PyCall", "PyPlot", "SpecialFunctions"]
-git-tree-sha1 = "e71130892571771624df1cfca7cc6a7a33f19a3e"
+git-tree-sha1 = "3c78f93ffcd5e5b8c45e2b0431be30ab51d969ad"
 repo-rev = "master"
 repo-url = "https://github.com/astrobc1/EchelleReduce.jl"
 uuid = "579f7780-8ee9-4b14-aabb-d9ce68a4959f"
@@ -367,6 +367,11 @@ weakdeps = ["PDMats", "SparseArrays", "Statistics"]
     FillArraysPDMatsExt = "PDMats"
     FillArraysSparseArraysExt = "SparseArrays"
     FillArraysStatisticsExt = "Statistics"
+
+[[deps.FindFirstFunctions]]
+git-tree-sha1 = "e90fef90f7d75e6a5b435b0fd65609759f99717a"
+uuid = "64ca27bc-2ba2-4a57-88aa-44e436879224"
+version = "1.2.0"
 
 [[deps.FiniteDiff]]
 deps = ["ArrayInterface", "LinearAlgebra", "Requires", "Setfield", "SparseArrays"]
@@ -1019,9 +1024,9 @@ uuid = "06e1c1a7-607b-532d-9fad-de7d9aa2abac"
 version = "0.5.0"
 
 [[deps.TranscodingStreams]]
-git-tree-sha1 = "14389d51751169994b2e1317d5c72f7dc4f21045"
+git-tree-sha1 = "71509f04d045ec714c4748c785a59045c3736349"
 uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
-version = "0.10.6"
+version = "0.10.7"
 weakdeps = ["Random", "Test"]
 
     [deps.TranscodingStreams.extensions]
