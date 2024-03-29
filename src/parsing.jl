@@ -50,7 +50,7 @@ end
 # Read in reduced spectrum and error, wavelength separate
 function Base.read(
         data::iSHELLL1;
-        order::Int, flip=true, hdu::Int=2, pix_range::Union{Vector{Int}, Nothing}=nothing, norm::Union{Real, Nothing}=nothing
+        order::Int, flip=true, hdu::Int=2, pix_range::Union{NTuple{2, Int}, Nothing}=nothing, norm::Union{Real, Nothing}=nothing
     )
     spec, specerr = FITS(data.filename) do file
         d = read(file[hdu], "$order")
